@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Delete Product</h1>
+<div mat-dialog-content>
+  <form>
+    <mat-form-field>
+      <mat-label>Product's Id</mat-label>
+      <input matInput [(ngModel)]="id">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="id" (click)="deleteProduct()" cdkFocusInitial>delete</button>
+</div>
